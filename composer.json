@@ -1,4 +1,12 @@
 {
+    "autoload": {
+        "psr-4": {
+            "Cove\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.1"
+    },
     "require-dev": {
         "pestphp/pest": "^1.20"
     }
