@@ -1,4 +1,5 @@
 {
+    "name": "phpnodes/phpnodes",
     "autoload": {
         "psr-4": {
             "Cove\\": "src/"
