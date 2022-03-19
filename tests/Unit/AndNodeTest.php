@@ -12,12 +12,12 @@ it(
         $b = new IntegerValueNode(3);
         $node = new AndNode();
 
-        (new Connector)->patch(
+        new Connector(
             $a->output[0],
             $node->input[0]
         );
 
-        (new Connector)->patch(
+        new Connector(
             $b->output[0],
             $node->input[1]
         );

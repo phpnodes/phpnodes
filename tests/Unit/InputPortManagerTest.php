@@ -6,7 +6,8 @@ use Cove\Ports\IntegerInputPort;
 it(
     'has input port',
     function () {
-        $port = new IntegerInputPort();
+        $node             = anonymousNode();
+        $port             = new IntegerInputPort($node);
         $inputPortManager = new InputPortManager(
             $port
         );

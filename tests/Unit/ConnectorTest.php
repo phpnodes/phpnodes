@@ -7,10 +7,10 @@ use Cove\Ports\IntegerOutputPort;
 it(
     'can connect to an input port',
     function () {
-        $input = new IntegerInputPort();
-        $output = new IntegerOutputPort();
-        $connector = new Connector();
-        $connector->patch($output, $input);
+        $node      = anonymousNode();
+        $input     = new IntegerInputPort($node);
+        $output    = new IntegerOutputPort($node);
+        $connector = new Connector($output, $input);
 
         expect($connector->input)->toBe($input);
         expect($connector->output)->toBe($output);

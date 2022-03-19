@@ -11,8 +11,6 @@ use Cove\Ports\Exceptions\PortNotConnectedException;
  */
 abstract class InputPort extends Port
 {
-    protected Connector $connector;
-
     /**
      * @throws PortException
      * @throws PortNotConnectedException
@@ -33,10 +31,5 @@ abstract class InputPort extends Port
     protected function getValue():mixed
     {
         return $this->connector->output->getResult();
-    }
-
-    public function setConnector(Connector $connector):void
-    {
-        $this->connector = $connector;
     }
 }

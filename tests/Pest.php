@@ -24,6 +24,8 @@
 |
 */
 
+use Cove\Nodes\Contracts\NodeContract;
+
 expect()->extend('toBeOne', function () {
     return $this->toBe(1);
 });
@@ -39,7 +41,11 @@ expect()->extend('toBeOne', function () {
 |
 */
 
-function something()
+function anonymousNode(): NodeContract
 {
-    // ..
+    return new class implements NodeContract {
+        public function calculate()
+        {
+        }
+    };
 }
